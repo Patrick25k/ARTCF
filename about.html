@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTCF - About Us</title>
+    <link rel="shortcut icon" href="images/ARTCF logo.jpeg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #0d6efd;
+            --accent-color: #0d6efd;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+        
+        .page-header {
+            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('images/pic8.png');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            margin-bottom: 50px;
+        }
+        
+        .section-heading {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            max-height: 80px;
+            width: auto;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        
+        .cta-section {
+            background: linear-gradient(rgba(72, 181, 248, 0.9), rgba(231, 76, 60, 0.9)), url('images/pic1.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #0d6efd;
+            border-color: #c0392b;
+        }
+        
+        .btn-outline-primary {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .team-member-img {
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+        .story-section {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+        }
+        
+        .story-section img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .mission-card {
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .vision-card {
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <img src="images/ARTCF logo.jpeg" height="60px"/>
+            <a class="navbar-brand fw-bold" href="index.html">ARTCF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Our Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-white text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">About ARTCF</h1>
+            <p class="lead">Learn about our history, mission, and the team behind our work.</p>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="./images/pic8.png" alt="ARTCF History" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-heading">Our Story</h2>
+                    <p>
+                        Founded in 1988 and received legal status as a non-governmental organisation in Rwanda in April 1991 and renewable in September 2005. ARTCF aimed to improve life conditions of people by fighting poverty especially alongside poor women. We organise professional training and giving material and financial assistance for the impoverished Rwandan women to get out from socio-economical and cultural isolation.
+                    </p>
+                    <p>ARTCF was set up by an initiative of a group of Rwandan women, who found difficulties in which the women were struggling by raising children alone, having no stable wage jobs, and having no supports either material or moral, in order to achieve objectives to assist these impoverished women materially, morally and culturally.</p>
+                    
+                    <p>The context analysis of ARTCF reveals that people living in poverty largely are the women who live in rural areas and in some parts surrounding Kigali city. These are poor people but economically active deserving particular kick-start of the ARTCF's interventions in eradicating poverty.  ARTCF will work with them and their organizations to empower them to engage with duty bearers to respond to their needs. ARTCF works also in partnership with other institutions engaged in combating poverty. Empowerment of women, to have a strong says in family and community decisions and control is among main focus, while men's awareness is also considered.</p>
+                    <p>ARTCF facilitates the active participation and ownership of community members in all aspects of their development. The aim being to support a culture of reciprocal relationships, mutual accountability, shared decision making and values. That participation seeks to develop capacity of the communities and facilitate a deepened critical thinking and awareness in all the communities. ARTCF encourages a culture of dialogue and sharing of information among the various programs and projects.</p>
+                    <p>Integration:
+                        ARTCF makes effort to reinforce systems and structures that ensure that into all fields of its interventions following key factors are combined to speed up significant changes in beneficiaries living conditions: Income, education, Health, Nutrition Lifestyle. This package is delivered entirely in ideal way; nevertheless, a minimum can't go down a trio. All interventions are integrated, coordinated and harmonized to minimize waste and duplication. 
+                    </p>
+                    <p>Today, ARTCF works with partners worldwide to implement programs that address the unique needs of each community we serve. Our approach is collaborative, inclusive, and focused on long-term impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-heading">Our Mission & Vision</h2>
+                    <p class="text-muted">Guiding principles that drive our work every day.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm mission-card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-4"><i class="fas fa-bullseye me-2"></i> Our Mission</h3>
+                            <p class="card-text">ARTCF intervenes with workers living low life standards with focus on women to empower them by raising awareness of their ability to get out from socio-economic problems and to be financially and socially independent</p>
+                            <p class="card-text">We believe in working alongside communities, respecting their knowledge and experiences, and co-creating solutions that lead to lasting change.</p>
+                            <p class="card-text">Our mission is fulfilled through collaborative partnerships, innovative approaches, and a deep commitment to equity and inclusion.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm vision-card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-4"><i class="fas fa-eye me-2"></i> Our Vision</h3>
+                            <p class="card-text">A country without poverty and injustice in which every person enjoys the well-being both physically and spiritually
+
+                                .</p>
+                            <p class="card-text">We envision societies where education is accessible to all, healthcare is a right not a privilege, and development is sustainable and equitable.</p>
+                            <p class="card-text">Our vision guides us toward creating a more just and compassionate world for current and future generations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-heading">Our Core Values</h2>
+                    <p class="text-muted">The association works together with all people who are concerned for sustainable development regardless of any religions.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-balance-scale value-icon mb-3"></i>
+                            <h4 class="card-title">Faith&Justice</h4>
+                            <p class="card-text">The association works together with all people who are concerned for sustainable development regardless of any religions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-hands value-icon mb-3"></i>
+                            <h4 class="card-title">Labor</h4>
+                            <p class="card-text">ARTCF is committed to be creative and constructively engage without fear to pursuit of making greatest possible impact on eradicating all causes of women’s poverty engaged in action.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-leaf value-icon mb-3"></i>
+                            <h4 class="card-title">Hospitality, simplicity and Caring</h4>
+                            <p class="card-text">ARTCF recognizes and appreciates the inherent value of each human being and the significance of diversity.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users value-icon mb-3"></i>
+                            <h4 class="card-title">Solidality&Charity</h4>
+                            <p class="card-text">ARTCF’s members are characterized by permanent empathy towards all community members. To demonstrate Christian’s behaviour every member is invited to act in chartable way for all human being in needs especially weaker people (sick and destitute peoples, prisoners, orphans and other vulnerable groups).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+   
+    <!-- Our Partners -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-heading">Our Partners</h2>
+                    <p class="text-muted">We collaborate with organizations that share our vision and values.</p>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center flex-nowrap overflow-auto py-3" style="gap: 24px;">
+                <div class="col-auto">
+                    <img src="./images/USAID-Identity.svg" alt="USAID Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                <div class="col-auto">
+                    <img src="./images/unicef.svg" alt="UNICEF Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                <div class="col-auto">
+                    <img src="./images/WHO_logo.svg" alt="WHO Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                <div class="col-auto">
+                    <img src="./images/england.svg" alt="England Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                <div class="col-auto">
+                    <img src="./images/care-1.svg" alt="Care Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                <div class="col-auto">
+                    <img src="./images/arc-1.svg" alt="ARC Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                <div class="col-auto">
+                    <img src="./images/the-world-bank-logo.svg" alt="World Bank Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                <div class="col-auto">
+                    <img src="./images/wda.svg" alt="WDA Logo" class="img-fluid partner-logo" style="max-height: 80px;">
+                </div>
+                
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">Become a Partner</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Annual Reports -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-heading">Annual Reports & Financials</h2>
+                    <p class="text-muted">We are committed to transparency and accountability.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-file-pdf text-danger mb-3" style="font-size: 3rem;"></i>
+                            <h5 class="card-title">Annual Report 2022</h5>
+                            <p class="card-text">Our comprehensive report detailing our activities, impact, and financial information for the year 2022.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-file-pdf text-danger mb-3" style="font-size: 3rem;"></i>
+                            <h5 class="card-title">Annual Report 2021</h5>
+                            <p class="card-text">A detailed overview of our programs, achievements, and financial statements from 2021.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-line text-success mb-3" style="font-size: 3rem;"></i>
+                            <h5 class="card-title">Financial Statements</h5>
+                            <p class="card-text">Audited financial statements demonstrating our commitment to responsible stewardship.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">View Financials</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4">Join Our Mission</h2>
+                    <p class="lead mb-5">Together, we can create lasting change in communities worldwide.</p>
+                    <a href="events.html" class="btn btn-primary btn-lg me-3">Upcoming Events</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <h5>ARTCF</h5>
+                    <p>Empowering women through sustainable development.</p>
+                    <img src="./images/ARTCF logo.jpeg" alt="ARTCF Logo" class="img-fluid mt-2" style="max-width: 100px;">
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="home.html" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="programs.html" class="text-white">Our Programs</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white">Events</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Kigali, Rwanda</p>
+                        <p><i class="fas fa-phone me-2"></i> +250 (788) 123 456</p>
+                        <p><i class="fas fa-envelope me-2"></i>  artcfr@gmail.com</p>
+                    </address>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/artcf.rwanda" class="text-white me-2"target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ArtcfArtcfr"target="_blank" rel="noopener noreferrer" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/artcf_r9/"target="_blank" rel="noopener noreferrer" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/watch?v=npvEdhGmVlo"target="_blank" rel="noopener noreferrer" class="text-white me-2"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <h6>Subscribe to Newsletter</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 ARTCF. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

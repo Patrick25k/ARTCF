@@ -1,0 +1,143 @@
+/* Global Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    padding: 8rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+    padding: 5rem 0;
+    margin-top: 2rem;
+}
+
+/* Mission Icons */
+.mission-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* Value Icons */
+.value-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* Impact Stats */
+.impact-stat {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.impact-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Partner Logos */
+.partner-logo {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    max-height: 80px;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+/* Social Icons */
+.social-icons a {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Donation Form */
+.donation-form {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Program Card */
+.program-card {
+    transition: all 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section, .page-header {
+        padding: 4rem 0;
+    }
+    
+    .cta-section {
+        padding: 3rem 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section, .page-header {
+        padding: 3rem 0;
+    }
+    
+    .cta-section {
+        padding: 2rem 0;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTCF - Home</title>
+    <link rel="shortcut icon" href="images/ARTCF logo.jpeg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <img src="images/ARTCF logo.jpeg" height="60px"/>
+            <a class="navbar-brand fw-bold" href="home.html">ARTCF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Our Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center">
+        <style>
+            .hero-section {
+                position: relative;
+                height: 100vh;
+                min-height: 600px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+            }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+
+            .hero-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                opacity: 0;
+                transition: opacity 1.5s ease-in-out;
+            }
+
+            .hero-bg.active {
+                opacity: 1;
+            }
+
+            #pic1 {
+                background-image: url('images/pic1.png');
+            }
+
+            #pic2 {
+                background-image: url('images/pic2.jpg');
+            }
+
+            #pic3 {
+                background-image: url('images/pic3.png');
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            @media (max-width: 768px) {
+                .hero-section {
+                    height: 80vh;
+                    min-height: 500px;
+                }
+            }
+        </style>
+    
+        <!-- Background Images -->
+        <div class="hero-bg active" id="pic1"></div>
+        <div class="hero-bg" id="pic2"></div>
+        <div class="hero-bg" id="pic3"></div>
+    
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="display-4 fw-bold">Empowering Women  For Sustainable Development</h1>
+                    <p class="lead mb-4">ARTCF is dedicated to creating positive change through community-driven initiatives and sustainable development programs.</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="programs.html" class="btn btn-outline-light btn-lg px-4 me-sm-3">Our Programs</a>
+                        <a href="contact.html" class="btn btn-primary btn-lg px-4">Get Involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const backgrounds = [
+                    document.getElementById('pic1'),
+                    document.getElementById('pic2'),
+                    document.getElementById('pic3')
+                ];
+                let current = 0;
+                
+                function nextBackground() {
+                    backgrounds[current].classList.remove('active');
+                    current = (current + 1) % backgrounds.length;
+                    backgrounds[current].classList.add('active');
+                }
+                
+                // Change background every 5 seconds
+                setInterval(nextBackground, 5000);
+                
+                // Pause animation on hover
+                const heroSection = document.querySelector('.hero-section');
+                heroSection.addEventListener('mouseenter', function() {
+                    clearInterval(interval);
+                });
+                
+                heroSection.addEventListener('mouseleave', function() {
+                    interval = setInterval(nextBackground, 5000);
+                });
+                
+                let interval = setInterval(nextBackground, 5000);
+            });
+        </script>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-hands-helping mission-icon mb-3"></i>
+                            <h3 class="card-title">Our Mission</h3>
+                            <p class="card-text">ARTCF intervenes with workers living low life standards with focus on women to empower them by raising awareness of their ability to get out from socio-economic problems and to be financially and socially independent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-eye mission-icon mb-3"></i>
+                            <h3 class="card-title">Our Vision</h3>
+                            <p class="card-text">A country without poverty and injustice in which every person enjoys the well-being both physically and spiritually.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-heart mission-icon mb-3"></i>
+                            <h3 class="card-title">Our Values</h3>
+                            <p class="card-text">Labor , Faith and Justice,Solidarity and Charity, sustainability, and Hospitality, simplicity and caring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-heading">Our Impact</h2>
+                    <p class="text-muted">Over the years, ARTCF has made significant contributions to communities worldwide.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4 text-center">
+                    <div class="impact-stat">
+                        <h2 class="display-4 fw-bold text-primary">50+</h2>
+                        <p>Communities Served</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <div class="impact-stat">
+                        <h2 class="display-4 fw-bold text-primary">10K+</h2>
+                        <p>Lives Impacted</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <div class="impact-stat">
+                        <h2 class="display-4 fw-bold text-primary">100+</h2>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <div class="impact-stat">
+                        <h2 class="display-4 fw-bold text-primary">25+</h2>
+                        <p>ongoing projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Programs -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-heading">Featured Programs</h2>
+                    <p class="text-muted">Explore some of our key initiatives make it happen.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/pic10.png" class="card-img-top" alt="Education Program">
+                        <div class="card-body">
+                            <h4 class="card-title">Fighting malnutrion</h4>
+                            <p class="card-text">helping children and families eat healthy foods so they can grow strong and not get sick..</p>
+                            <a href="programs.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/pic9.png" class="card-img-top" alt="Healthcare Program">
+                        <div class="card-body">
+                            <h4 class="card-title">adult literacy</h4>
+                            <p class="card-text">It gives adults the skills they need to work, help their children, and understand information..</p>
+                            <a href="programs.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./images/pic2.jpg" class="card-img-top" alt="Sustainable Development">
+                        <div class="card-body">
+                            <h4 class="card-title">voluntery saving and loan group</h4>
+                            <p class="card-text"> It helps people manage money, start small businesses, or handle emergencies.</p>
+                            <a href="programs.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Upcoming Events Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="section-heading">Upcoming Events</h2>
+                <p class="text-muted">Join us in our upcoming activities to connect, learn, and create change together.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Health Workshop</h5>
+                        <p class="card-text">A hands-on session to promote hygiene, nutrition, and preventive care in local villages.</p>
+                        <p><i class="fas fa-calendar-alt me-2"></i><strong>Date:</strong> May 10, 2025</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i><strong>Location:</strong> Kigali, Rwanda</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Youth Empowerment Summit</h5>
+                        <p class="card-text">A regional conference to inspire and equip young leaders with skills for community development.</p>
+                        <p><i class="fas fa-calendar-alt me-2"></i><strong>Date:</strong> June 15, 2025</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i><strong>Location:</strong> Musanze District</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Environmental Awareness Drive</h5>
+                        <p class="card-text">Community tree planting and clean-up event to support sustainable practices and protect nature.</p>
+                        <p><i class="fas fa-calendar-alt me-2"></i><strong>Date:</strong> July 22, 2025</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i><strong>Location:</strong> Huye, Southern Province</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Testimonials -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-heading">Testimonials</h2>
+                    <p class="text-muted">Hear from those we've helped and our supporters.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">"ARTCF's education program has transformed our community. Children now have access to quality education and resources they never had before."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Community Leader">
+                                <div>
+                                    <h5 class="mb-0">Sarah Johnson</h5>
+                                    <small class="text-muted">Community Leader</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second testimonial removed as it mentioned a donor -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4">Join Us in Make it happen</h2>
+                    <p class="lead mb-5">Be part of our journey to empower more communities and promote sustainable development.</p>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <h5>ARTCF</h5>
+                    <p>Make it happen for community-driven initiatives since 1988.</p>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="programs.html" class="text-white">Our Programs</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> KG 3 Avenue , Kigali, Rwanda</p>
+                        <p><i class="fas fa-phone me-2"></i> + (250) 788-858-468</p>
+                        <p><i class="fas fa-envelope me-2"></i> artcfr@gmail.com</p>
+                    </address>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/artcf.rwanda" class="text-white me-3"target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/ArtcfArtcfr"target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/artcf_r9/"target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-outline-light">Subscribe to Newsletter</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>&copy; 2025 ARTCF. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p><a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
